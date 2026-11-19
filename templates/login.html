@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | IRIS Hospital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    body {
+            min-height: 100vh;
+            display: flex;
+            background: #F7F9FC;
+        }
+
+        .left-panel {
+            width: 55%;
+            background: #163A5F;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 70px;
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #F3E6CC;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .welcome {
+            margin-top: 75px;
+        }
+
+        .welcome h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            color: #D8E4F0;
+            line-height: 1.8;
+        }
+
+        .right-panel {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 390px;
+        }
+
+        .login-box h2 {
+            color: #163A5F;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #64748B;
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            color: #263445;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #D5DEE8;
+            border-radius: 8px;
+            margin-bottom: 22px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #2878A8;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #163A5F;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2878A8;
+        }
+
+        .champagne {
+            color: #B59660;
+        }
+
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #94A3B8;
+            font-size: 12px;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                flex-direction: column;
+            }
+
+            .left-panel, .right-panel {
+                width: 100%;
+            }
+
+            .left-panel {
+                padding: 40px 30px;
+            }
+
+            .welcome {
+                margin-top: 30px;
+            }
+
+            .right-panel {
+                padding: 45px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="left-panel">
+        <div class="logo">IRIS <span class="champagne">HOSPITAL</span></div>
+
+        <div class="subtitle">
+            Integrated Radiology Information System
+        </div>
+
+        <div class="welcome">
+            <h2>Smart Workflow.<br>Better Imaging.</h2>
+            <p>
+                An integrated radiology information system
+                designed to support efficient imaging workflows,
+                patient management, and diagnostic reporting.
+            </p>
+        </div>
+    </section>
+
+    <section class="right-panel">
+        <div class="login-box">
+
+            <h2>Welcome Back</h2>
+
+            <p class="description">
+                Sign in to access IRIS Hospital.
+            </p>
+
+            <form action="/login" method="POST">
+
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">SIGN IN</button>
+
+            </form>
+
+            <div class="footer">
+                Authorized Personnel Only<br><br>
+                IRIS Hospital © 2026
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
